@@ -24,20 +24,31 @@ public class App {
             Document document = new Document(pdfDocument);
 
             // Load the image
-            Image image = new Image(ImageDataFactory.create(imagePath));
+            Image image1 = new Image(ImageDataFactory.create(imagePath));
+            Image image2 = new Image(ImageDataFactory.create(imagePath));
 
             // Set the size and position of the image on the page
-            float imageWidth = 195f; // Replace with your desired image width
-            float imageHeight = 58f; // Replace with your desired image height
-            float xPosition = 2995f; // Replace with your desired X position
-            float yPosition = 253f; // Replace with your desired Y position
+            float imageWidth1 = 195f; // Replace with your desired image width
+            float imageHeight1 = 58f; // Replace with your desired image height
+            float xPosition1 = 2995f; // Replace with your desired X position
+            float yPosition1 = 253f; // Replace with your desired Y position
 
-            image.setWidth(UnitValue.createPointValue(imageWidth));
-            image.setHeight(UnitValue.createPointValue(imageHeight));
-            image.setFixedPosition(xPosition, yPosition);
+            float imageWidth2 = 145f; // Replace with your desired image width
+            float imageHeight2 = 58f; // Replace with your desired image height
+            float xPosition2 = 3194f; // Replace with your desired X position
+            float yPosition2 = 253f; // Replace with your desired Y position
+
+            image1.setWidth(UnitValue.createPointValue(imageWidth1));
+            image1.setHeight(UnitValue.createPointValue(imageHeight1));
+            image1.setFixedPosition(xPosition1, yPosition1);
+
+            image2.setWidth(UnitValue.createPointValue(imageWidth2));
+            image2.setHeight(UnitValue.createPointValue(imageHeight2));
+            image2.setFixedPosition(xPosition2, yPosition2);
 
             // Add the image to a specific page (e.g., page 1)
-            document.add(image);
+            document.add(image1);
+            document.add(image2);
 
             // Close the document
             document.close();
